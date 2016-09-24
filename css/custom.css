@@ -1,0 +1,267 @@
+/* Shared
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+.section-tighter {
+  padding: 2rem 0 2rem;
+  text-align: center;
+}
+.section-heading-tighter,
+.section-description-tighter {
+  margin-bottom: .2rem;
+}
+
+
+/* Hero
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
+}
+
+
+/* Values
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.values {
+  background-image:url('../images/shutter1400.jpg');
+  background-color: hsl(0, 0%, 27%);
+  background-blend-mode: luminosity;
+  transition: .5s background-color;
+  color: #fff;
+}
+
+.values:hover {
+    background-color: transparent;
+
+}
+
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #FFFFFF;
+}
+.value-heading {
+  font-family: co-headline;
+  margin-bottom: .0rem;
+}
+.value-description {
+  opacity: .8;
+   font-weight: 300;
+}
+
+/* Help
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Floating Nav Bar                                */
+
+header {
+  width:100%;
+  background-image:url('../images/shutter1400.jpg');
+  position: fixed;
+  height: 4.15em;
+  z-index: 10;
+  padding: .5em .2em 0;
+/*  border-bottom: 1px solid orange;
+ */ transition: .5s background-image;
+  background: hsla(100%,100%,100%,.25) border-box;
+  background-blend-mode: darken;
+}
+
+img.nav {
+  max-width: 190px;
+  width: calc(100vw - (100vw - 22%));
+}
+
+li:first-child {display:inline;margin:0 13px;text-decoration: underline;}
+
+
+li:nth-child(2), li:nth-child(2) ~ li  { 
+
+  display: inline;
+  color: #FFFFFF;
+  font-size: calc(100vw - (100vw - 100%));
+  float: right;
+  margin: 0px 10px;
+ 
+}
+ul:first-child { 
+
+  float:left; 
+  width:100%;
+
+}
+
+ul:nth-child(2), ul:nth-child(2) ~ li {
+  
+  margin:0;
+  float:right;
+  
+}
+
+.position-wrapper {
+    background-image: url("../images/san_francisco.png");
+    background-size: 350px 350px, cover;
+    border-radius: 100%;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    margin-top: 40px;
+
+    display: table;
+}
+
+ 
+.text-container {
+  display: table-cell;
+  vertical-align: middle;
+    text-align: center;
+
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+.position {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.salary {
+    color: white;
+    font-size: 35px;
+}
+
+.location {
+    color: white;
+    font-size: 25px;
+}
+
+
+/* Categories
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.categories {
+  background-image: url('../images/values-bg.jpg');
+  background-size: contain;
+  color: #fff;
+  /* height: 460px; */
+}
+.categories .section-description { 
+  margin-bottom: 4rem;
+   }
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .wall {
+  position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
