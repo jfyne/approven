@@ -2,9 +2,9 @@
 build:
   box:
     id: ernestoalejo/google-cloud-sdk-with-docker
+    - wercker/add-to-known_hosts@2.0.1
   steps:
     - script:
-    - wercker/add-to-known_hosts@2.0.1
       name: Activate service account
       code: |
         echo $GOOGLE_JSON >> secret.json
