@@ -3,9 +3,9 @@
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
 deploy: 
-  box: python:2.7
-    id: google/cloud-sdk
-    tag: latest 
+  box:
+      id: google/cloud-sdk
+      tag: latest 
 
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
@@ -25,15 +25,14 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-      name: activate service account
-      code: |
-        echo $GOOGLE_JSON >> secret.json
-        CLOUDSDK_PYTHON_SITEPACKAGES=1 gcloud auth activate-service-account $GOOGLE_ACCOUNT --key-file secret.json
-    - script:
-      name: upload to gs
-      code: |
-        # Sync
-        gsutil -m rsync -r -d public gs://$GOOGLE_BUCKET
-        # Create gz files
-        gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg public/* gs://$GOOGLE_BUCKET
+  - narinari/gcs-website-deploy:
+    bucket:   www.approven.com
+    project:  essential-oasis-144121
+    access_key_id:  AIzaSyDazF-m8l2staTZimXh6rfm-8GrjJwRBRA
+    secret_access_key:  77dfe8a68063a1d2a85bdfa43aad58bc978f3195  
+
+ # options
+    dir:      public
+
+
 
