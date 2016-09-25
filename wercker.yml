@@ -2,7 +2,11 @@
 # Docker Hub https://registry.hub.docker.com/_/debian/
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: debian
+deploy: 
+  box:
+      id: google/cloud-sdk
+      tag: latest 
+
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
 # services:
@@ -20,14 +24,16 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-  - narinari/gcs-website-deploy:
-    bucket:   www.approven.com
-    project:  essential-oasis-144121
-    access_key_id:    AIzaSyDazF-m8l2staTZimXh6rfm-8GrjJwRBRA
-    secret_access_key:    $GCS_SECRET_ACCESS_KEY
-
- # options
-    dir:      public
-
-
+    - script:
+      name: activate service account
+      code: |
+        echo $GOOGLE_JSON >> secret.json
+        CLOUDSDK_PYTHON_SITEPACKAGES=1 gcloud auth activate-service-account $GOOGLE_ACCOUNT --key-file secret.json
+    - script:
+      name: upload to gs
+      code: |
+        # Sync
+        gsutil -m rsync -r -d public gs://$GOOGLE_BUCKET
+        # Create gz files
+        gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg public/* gs://$GOOGLE_BUCKET
 
