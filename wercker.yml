@@ -21,4 +21,4 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-         - narinari/gcs-website-deploy@1.1.2
+         narinari/gcs-website-deploy@1.1.2
