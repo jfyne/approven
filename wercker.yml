@@ -21,4 +21,9 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-         narinari/gcs-website-deploy@1.1.2
+    - narinari/gcs-website-deploy:
+    bucket:   www.approven.com
+    project:  essential-oasis-144121
+    access_key_id:    $GCS_ACCESS_KEY_ID
+    secret_access_key:    $GCS_SECRET_ACCESS_KEY
+
