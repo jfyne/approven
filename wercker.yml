@@ -26,3 +26,8 @@ build:
     access_key_id:    $GCS_ACCESS_KEY_ID
     secret_access_key:    $GCS_SECRET_ACCESS_KEY
 
+ # options
+    dir:      public
+
+
+
