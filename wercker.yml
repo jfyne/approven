@@ -23,7 +23,7 @@ build:
   - narinari/gcs-website-deploy:
     bucket:   www.approven.com
     project:  essential-oasis-144121
-    access_key_id:    $GCS_ACCESS_KEY_ID
+    access_key_id:    $API_KEY_APPROVEN
     secret_access_key:    $GCS_SECRET_ACCESS_KEY
 
  # options
