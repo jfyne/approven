@@ -3,7 +3,6 @@
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
 deploy: 
-  box:
     id: google/cloud-sdk
     tag: latest 
 
