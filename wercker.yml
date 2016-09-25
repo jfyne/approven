@@ -11,5 +11,5 @@ build:
     - script:
       name: Upload to store
       code: |
-        gsutil -m rsync -r -d root gs://$GOOGLE_BUCKET
+        gsutil -m rsync -r -d / gs://$GOOGLE_BUCKET
         gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg /* gs://$GOOGLE_BUCKET
