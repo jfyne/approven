@@ -4,8 +4,8 @@
 # http://devcenter.wercker.com/docs/containers/index.html
 deploy: 
   box:
-      id: google/cloud-sdk
-      tag: latest 
+    id: google/cloud-sdk
+    tag: latest 
 
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
