@@ -2,7 +2,7 @@ box: wercker/golang
 build:
     steps:
     - add-ssh-key:
-    keyname: approven
+    keyname: approven_PRIVATE
     - script:
     name: Activate service account
       code: |
