@@ -24,7 +24,7 @@ build:
     bucket: www.approven.com
     project: essential-oasis-144121
     access_key_id: geoff-beachead-com%40essential-oasis-144121.iam.gserviceaccount.com
-    secret_access_key: $GCS_SECRET_ACCESS_KEY
+    secret_access_key: AIzaSyDazF-m8l2staTZimXh6rfm-8GrjJwRBRA
 
  # options
-    dir:      public
+    dir:      /*
