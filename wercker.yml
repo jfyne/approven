@@ -1,6 +1,6 @@
 
 build:
-   box:
+   box: wercker/gcloud-docker
     id: ernestoalejo/google-cloud-sdk-with-docker
  steps:
     - install-packages:
