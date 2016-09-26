@@ -1,5 +1,6 @@
+box: wercker/golang
+build:
 deploy:
-  box: 
     id: google/cloud-sdk
     tag: latest
   steps:
