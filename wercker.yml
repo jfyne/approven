@@ -12,6 +12,6 @@ deploy:
       name: upload to gs
       code: |
         # Sync
-        gsutil -m rsync -r -d public gs://www.approven.com
+        gsutil -m rsync -r -d root gs://www.approven.com
         # Create gz files
         gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg / gs://www.approven.com
