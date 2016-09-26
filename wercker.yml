@@ -1,8 +1,7 @@
 box: wercker/golang
 build:
-    deploy:
+deploy:
     id: google/cloud-sdk
-    tag: latest
     steps:
     - script:
       name: activate service account
