@@ -1,16 +1,29 @@
 
 build:
-  box:
+  box: wercker/golang
     id: ernestoalejo/google-cloud-sdk-with-docker
   steps:
+    - add-ssh-key:
+        keyname: MYKEY
     - script:
       name: Activate service account
       code: |
         echo $GOOGLE_JSON >> secret.json
         CLOUDSDK_PYTHON_SITEPACKAGES=1 gcloud auth activate-service-account $GOOGLE_ACCOUNT --key-file secret.json
     - script:
+    - setup-go-workspace
+    - script:
+        name: Clone private packages
+        code: |-
+          git clone git@github.com:beachead/approven.git $GOPATH/src/github.com/beachead/approven
+    - script:
+        name: Go build
+        code: go build -v
+    - script:
+        name: Go test
+        code: go test -v
       name: Upload to store
       code: |
         gsutil -m rsync -r -d root gs://$GOOGLE_BUCKET
         gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg /* gs://$GOOGLE_BUCKET
-        
+
