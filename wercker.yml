@@ -4,7 +4,7 @@ build:
     - add-ssh-key:
       keyname: approven
     - script:
-    name: Activate service account
+      name: Activate service account
       code: |
         echo $GOOGLE_JSON >> secret.json
         CLOUDSDK_PYTHON_SITEPACKAGES=1 gcloud auth activate-service-account $GOOGLE_ACCOUNT --key-file secret.json
