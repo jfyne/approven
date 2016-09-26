@@ -1,18 +1,30 @@
-box: google-cloud-sdk-with-docker
-build-base:
-deploy:
-    id: google/cloud-sdk
-    steps:
-    - script:
-      name: activate service account
-      code: |
-        echo $GOOGLE_JSON >> secret.json
-        CLOUDSDK_PYTHON_SITEPACKAGES=1 gcloud auth activate-service-account $GOOGLE_ACCOUNT --key-file secret.json
-    steps:
-    - script:
-      name: upload to gs
-      code: |
-        # Sync
-        gsutil -m rsync -r -d root gs://www.approven.com
-        # Create gz files
-        gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg / gs://www.approven.com
+# This references a standard debian container from the
+# Docker Hub https://registry.hub.docker.com/_/debian/
+# Read more about containers on our dev center
+# http://devcenter.wercker.com/docs/containers/index.html
+box: debian
+# You can also use services such as databases. Read more on our dev center:
+# http://devcenter.wercker.com/docs/services/index.html
+# services:
+    # - postgres
+    # http://devcenter.wercker.com/docs/services/postgresql.html
+
+    # - mongo
+    # http://devcenter.wercker.com/docs/services/mongodb.html
+
+# This is the build pipeline. Pipelines are the core of wercker
+# Read more about pipelines on our dev center
+# http://devcenter.wercker.com/docs/pipelines/index.html
+build:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+  - narinari/gcs-website-deploy:
+    bucket:   www.approven.com
+    project:  essential-oasis-144121
+    access_key_id:    AIzaSyDazF-m8l2staTZimXh6rfm-8GrjJwRBRA
+    secret_access_key:    $GCS_SECRET_ACCESS_KEY
+
+ # options
+    dir:      public
