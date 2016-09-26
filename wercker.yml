@@ -3,7 +3,7 @@ build:
     deploy:
     id: google/cloud-sdk
     tag: latest
-  steps:
+    steps:
     - script:
       name: activate service account
       code: |
