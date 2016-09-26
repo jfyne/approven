@@ -1,6 +1,6 @@
 
 build:
-  box: wercker/golang
+  box:
     id: ernestoalejo/google-cloud-sdk-with-docker
   steps:
     - add-ssh-key:
