@@ -1,7 +1,6 @@
 box: wercker/golang
 build:
   steps:
-    - script:
     - add-ssh-key:
         keyname: MYKEY
     - script:
