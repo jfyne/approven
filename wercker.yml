@@ -1,5 +1,4 @@
 box: wercker/golang
-    id: ernestoalejo/google-cloud-sdk-with-docker
 build:
   steps:
     - script:
