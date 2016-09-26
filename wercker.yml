@@ -1,4 +1,4 @@
-box: docker/google-cloud-sdk-with-docker
+box: google-cloud-sdk-with-docker
 build-base:
 deploy:
     id: google/cloud-sdk
