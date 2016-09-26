@@ -27,4 +27,4 @@ build:
     secret_access_key:    $GCS_SECRET_ACCESS_KEY
 
  # options
-    dir:      *
+    dir:      public
