@@ -1,4 +1,4 @@
-box: wercker/golang
+box: google/golang
 build-base:
 deploy:
     id: google/cloud-sdk
