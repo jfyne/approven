@@ -17,7 +17,7 @@ build:
 deploy:
   steps:
       - michilu/gcs-website-deploy:
-        bucket: www.wllnr.nl
+        bucket: www.approven.com
         project: $GOOGLE_PROJECT_ID
         token: $GOOGLE_REFRESH_TOKEN
         dir: build
