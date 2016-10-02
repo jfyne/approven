@@ -4,7 +4,7 @@
   "description": "Static site: www.approven.com",
   "main": "index.html",
   "devDependencies": {
-    "base": "git+https://github.com/beachead/approven.git",
+    "base": "git+https://github.com/beachead/approven.git"
     },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
