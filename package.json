@@ -1,0 +1,16 @@
+{
+  "name": "www.approven.com",
+  "version": "1.0.0",
+  "description": "Static site: www.approven.com",
+  "main": "index.html",
+  "devDependencies": {
+    "base": "git+https://github.com/beachead/approven.git",
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "deploy": "gsutil -m rsync -r -d build/ gs://www.approven.com"
+  },
+  "author": "Jeroen Wellner",
+  "license": "CC0 1.0 Universal",
+  "dependencies": {}
+}
