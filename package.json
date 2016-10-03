@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "deploy": "gsutil -m cp -r -z * / gs://www.approven.com"
+    "deploy": "gsutil cp -R * gs://www.approven.com"
   },
   "author": "Jeroen Wellner",
   "license": "CC0 1.0 Universal",
