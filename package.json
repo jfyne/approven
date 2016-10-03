@@ -2,7 +2,7 @@
   "name": "approven.com",
   "version": "1.0.0",
   "description": "Static blog: www.approven.com",
-  "main": "index.html",
+  "main": "build/index.html",
   "devDependencies": {
     "base": "git+https://github.com/beachead/approven.git",
     "gulp": "^3.9.0",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "deploy": "cd /Users/geoff/approven // gsutil cp -R * gs://www.approven.com"
+    "deploy": "gsutil -m rsync -r -d build/ gs://www.approven.com"
   },
   "author": "Jeroen Wellner",
   "license": "CC0 1.0 Universal",
