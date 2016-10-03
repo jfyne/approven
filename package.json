@@ -4,7 +4,7 @@
   "description": "Static blog: www.approven.com",
   "main": "index.html",
   "devDependencies": {
-    "base": "git+https://github.com/beachead/approven",
+    "base": "git+https://github.com/beachead/approven.git",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-front-matter": "^1.3.0",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "deploy": "gsutil cp -R * gs://www.approven.com"
+    "deploy": "cd /Users/geoff/approven // gsutil cp -R * gs://www.approven.com"
   },
   "author": "Jeroen Wellner",
   "license": "CC0 1.0 Universal",
