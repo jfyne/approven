@@ -10,8 +10,9 @@ build:
     - script:
         name: echo nodejs information
         code: |
-          echo "node version $(node -xv) running"
-          echo "npm version $(npm -xv) running"
+          echo "node -v && npm -v && gulp -v"
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
           
           
 deploy:
