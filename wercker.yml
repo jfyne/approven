@@ -11,6 +11,7 @@ build:
         name: echo nodejs information
         code: |
           echo "node -v && npm -v && gulp -v"
+          echo "npm install -g npm@latest"
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
           
