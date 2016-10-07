@@ -3,25 +3,19 @@ build:
   steps:
     - npm-install
     - npm-test
-
     - hgen/gulp:
-        tasks: build
-
+      tasks: build
     - script:
-        name: echo nodejs information
-        code: |
-          echo "node -v && npm -v && gulp -v"
-          echo "npm install -g npm@latest"
-          echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running"
-          
-          
+      name: echo nodejs information
+      code: |
+        echo "node -v && npm -v && gulp -v"
+        echo "npm install -g npm@latest"
+        echo "node version $(node -v) running"
+        echo "npm version $(npm -v) running"
 deploy:
   steps:
-      - michilu/gcs-website-deploy:
-        bucket: www.approven.com
-        project: $GOOGLE_PROJECT_ID
-        token: $GOOGLE_REFRESH_TOKEN
-        dir: build
-        
-        
+    - michilu/gcs-website-deploy:
+      bucket: www.approven.com
+      project: $GOOGLE_PROJECT_ID
+      token: $GOOGLE_REFRESH_TOKEN
+      dir: build
